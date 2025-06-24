@@ -1,0 +1,29 @@
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -Wextra
+
+# Target executable
+TARGET = risc_v_simulator
+
+# Source files
+SOURCES = trueOrignal.cpp nonPipelined.cpp
+
+# Object files
+OBJECTS = $(SOURCES:.cpp=.o)
+
+# Default rule
+all: $(TARGET)
+
+# Rule to build the target
+$(TARGET): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+# Rule for object files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean rule
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+
+# Phony targets
+.PHONY: all clean
