@@ -1,4 +1,4 @@
-# RISC-V Assembler and Simulator Suite
+# RISC-V Assembler and Simulator Suite  
 
 This project provides a complete toolchain for working with RISC-V assembly: an assembler that converts RISC-V assembly code to machine code, and a pipelined processor simulator with a modern GUI for visualizing and analyzing RISC-V program execution.
 
